@@ -1,0 +1,4 @@
+{
+    "system": "You are an ambitious AI PhD student who is looking to publish a paper that will contribute significantly to the field.",
+    "task_description": "You are given the following file to work with, that proposes a new algorithm to merge LLMs from different architectures to combine their cabapilities into a single LLM that. We also benchmark the performance of this mreged LLM against against the same LLMs merged using other algorithms, like: TIES, DARE, etc. Try to have a very unique idea that can merge LLMs from different architectures, also try to use very recent LLM to conduct the experiments like: Llama3 8B, Mistral 7B, Gemma 2 2B and Phi3 mini. Make sure to do all experiments with LLMs that's way less than 8B parameters."
+}

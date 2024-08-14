@@ -1,0 +1,50 @@
+# Title: Dynamic Fusion of LLMs for Adaptive and Efficient Language Modeling
+# Experiment description: We propose a dynamic fusion algorithm that selectively combines outputs from multiple LLMs based on input context. This involves adding a dynamic attention mechanism to the existing Transformer model that will weigh the contributions from each LLM dynamically. Steps for implementation include: 1) Modifying the Transformer class to include additional attention layers that attend to outputs from different LLMs. 2) Developing a scoring function to compute attention weights based on input context. 3) Integrating the weighted outputs to form the final response. 4) Benchmarking the dynamic fusion against static merging algorithms using metrics such as accuracy, loss, and computational efficiency.
+## Run 0: Baseline
+Results: {'x_div_y': {'final_train_loss_mean': 0.03495907473067442, 'final_val_loss_mean': 0.024754316235582035, 'final_train_acc_mean': 0.998242199420929, 'final_val_acc_mean': 0.9998372395833334, 'step_val_acc_99_mean': 3853.3333333333335}, 'x_minus_y': {'final_train_loss_mean': 0.45708311488851905, 'final_val_loss_mean': 0.19844909850507975, 'final_train_acc_mean': 0.88671875, 'final_val_acc_mean': 0.9593098958333334, 'step_val_acc_99_mean': 4533.333333333333}, 'x_plus_y': {'final_train_loss_mean': 0.055443374129633106, 'final_val_loss_mean': 0.030283655505627394, 'final_train_acc_mean': 0.9981770912806193, 'final_val_acc_mean': 0.9991861979166666, 'step_val_acc_99_mean': 2876.6666666666665}, 'permutation': {'final_train_loss_mean': 0.006427883480985959, 'final_val_loss_mean': 2.6680113350351653, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 0.65234375, 'step_val_acc_99_mean': 7460.0}}
+Description: Baseline results.
+
+## Run 1: Dynamic Fusion Algorithm
+Results: {'x_div_y': {'final_train_loss_mean': 0.006466611909369628, 'final_val_loss_mean': 0.007629223167896271, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 1.0, 'step_val_acc_99_mean': 4406.666666666667}, 'x_minus_y': {'final_train_loss_mean': 0.006164652140190204, 'final_val_loss_mean': 0.009430745150893927, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 0.9998372395833334, 'step_val_acc_99_mean': 5096.666666666667}, 'x_plus_y': {'final_train_loss_mean': 0.009297109441831708, 'final_val_loss_mean': 0.008724454324692488, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 1.0, 'step_val_acc_99_mean': 2930.0}, 'permutation': {'final_train_loss_mean': 0.03724913982053598, 'final_val_loss_mean': 7.286241213480632, 'final_train_acc_mean': 0.9977864821751913, 'final_val_acc_mean': 0.017740885416666668, 'step_val_acc_99_mean': 7500.0}}
+Description: Dynamic fusion algorithm results.
+
+## Run 2: Dynamic Fusion Algorithm with Increased Layers
+Results: {'x_div_y': {'final_train_loss_mean': 0.00849093139792482, 'final_val_loss_mean': 0.011464329125980536, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 0.9998372395833334, 'step_val_acc_99_mean': 4863.333333333333}, 'x_minus_y': {'final_train_loss_mean': 0.3871298542556663, 'final_val_loss_mean': 0.23336725992461047, 'final_train_acc_mean': 0.90625, 'final_val_acc_mean': 0.956787109375, 'step_val_acc_99_mean': 4456.666666666667}, 'x_plus_y': {'final_train_loss_mean': 0.006779674828673403, 'final_val_loss_mean': 0.00735609916349252, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 1.0, 'step_val_acc_99_mean': 2700.0}, 'permutation': {'final_train_loss_mean': 0.016140682622790337, 'final_val_loss_mean': 7.040411472320557, 'final_train_acc_mean': 0.9994791746139526, 'final_val_acc_mean': 0.029541015625, 'step_val_acc_99_mean': 7500.0}}
+Description: Dynamic fusion algorithm results with an increased number of layers in the Transformer model from 3 to 4.
+
+## Run 3: Dynamic Fusion Algorithm with Increased Heads
+Results: {'x_div_y': {'final_train_loss_mean': 0.010638537195821604, 'final_val_loss_mean': 0.013248026371002197, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 1.0, 'step_val_acc_99_mean': 4390.0}, 'x_minus_y': {'final_train_loss_mean': 0.6536923761789998, 'final_val_loss_mean': 0.2602770244702697, 'final_train_acc_mean': 0.8526041706403097, 'final_val_acc_mean': 0.951416015625, 'step_val_acc_99_mean': 4743.333333333333}, 'x_plus_y': {'final_train_loss_mean': 0.3536577105211715, 'final_val_loss_mean': 0.044696994979555406, 'final_train_acc_mean': 0.9391927123069763, 'final_val_acc_mean': 0.9986979166666666, 'step_val_acc_99_mean': 2610.0}, 'permutation': {'final_train_loss_mean': 0.10879886522889137, 'final_val_loss_mean': 7.966648419698079, 'final_train_acc_mean': 0.983398457368215, 'final_val_acc_mean': 0.010986328125, 'step_val_acc_99_mean': 7500.0}}
+Description: Dynamic fusion algorithm results with an increased number of heads in the Transformer model from 4 to 6.
+
+## Run 4: Dynamic Fusion Algorithm with Increased Layers
+Results: {'x_div_y': {'final_train_loss_mean': 0.4469371310745676, 'final_val_loss_mean': 1.2027416775623958, 'final_train_acc_mean': 0.915234386920929, 'final_val_acc_mean': 0.708740234375, 'step_val_acc_99_mean': 4760.0}, 'x_minus_y': {'final_train_loss_mean': 0.0162537582218647, 'final_val_loss_mean': 0.021574946120381355, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 0.99951171875, 'step_val_acc_99_mean': 4366.666666666667}, 'x_plus_y': {'final_train_loss_mean': 0.00661824472869436, 'final_val_loss_mean': 0.007170003994057576, 'final_train_acc_mean': 1.0, 'final_val_acc_mean': 1.0, 'step_val_acc_99_mean': 2830.0}, 'permutation': {'final_train_loss_mean': 0.09010211673254769, 'final_val_loss_mean': 5.224899431069692, 'final_train_acc_mean': 0.981835941473643, 'final_val_acc_mean': 0.3385416666666667, 'step_val_acc_99_mean': 7500.0}}
+Description: Dynamic fusion algorithm results with an increased number of layers in the Transformer model from 4 to 5.
+
+# Plot Descriptions
+## Training Loss Plots
+Each plot shows the training loss over the update steps for a specific dataset across different runs. The x-axis represents the number of update steps, and the y-axis represents the training loss. The shaded area around each line represents the standard error of the mean (SEM) for the training loss. These plots help visualize how the training loss decreases over time for each run and dataset.
+- Filename: train_loss_x_div_y.png
+- Filename: train_loss_x_minus_y.png
+- Filename: train_loss_x_plus_y.png
+- Filename: train_loss_permutation.png
+
+## Validation Loss Plots
+Each plot shows the validation loss over the update steps for a specific dataset across different runs. The x-axis represents the number of update steps, and the y-axis represents the validation loss. The shaded area around each line represents the standard error of the mean (SEM) for the validation loss. These plots help visualize how the validation loss changes over time for each run and dataset.
+- Filename: val_loss_x_div_y.png
+- Filename: val_loss_x_minus_y.png
+- Filename: val_loss_x_plus_y.png
+- Filename: val_loss_permutation.png
+
+## Training Accuracy Plots
+Each plot shows the training accuracy over the update steps for a specific dataset across different runs. The x-axis represents the number of update steps, and the y-axis represents the training accuracy. The shaded area around each line represents the standard error of the mean (SEM) for the training accuracy. These plots help visualize how the training accuracy improves over time for each run and dataset.
+- Filename: train_acc_x_div_y.png
+- Filename: train_acc_x_minus_y.png
+- Filename: train_acc_x_plus_y.png
+- Filename: train_acc_permutation.png
+
+## Validation Accuracy Plots
+Each plot shows the validation accuracy over the update steps for a specific dataset across different runs. The x-axis represents the number of update steps, and the y-axis represents the validation accuracy. The shaded area around each line represents the standard error of the mean (SEM) for the validation accuracy. These plots help visualize how the validation accuracy changes over time for each run and dataset.
+- Filename: val_acc_x_div_y.png
+- Filename: val_acc_x_minus_y.png
+- Filename: val_acc_x_plus_y.png
+- Filename: val_acc_permutation.png

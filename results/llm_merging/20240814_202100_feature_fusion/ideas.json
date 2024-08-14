@@ -1,0 +1,29 @@
+[
+    {
+        "Name": "llm_merging",
+        "Title": "A Powerful Algorithm to Merge Different LLM Architecture",
+        "Experiment": "We introduce a new algorithm to merge different LLMs into a single LLM, that can be very powerful through mering the different capabilities of different LLMs, and we benchmark it against other LLM merging algorithms",
+        "Interestingness": 9,
+        "Feasibility": 8,
+        "Novelty": 8,
+        "novel": true
+    },
+    {
+        "Name": "dynamic_fusion",
+        "Title": "Dynamic Fusion of LLMs for Adaptive and Efficient Language Modeling",
+        "Experiment": "We propose a dynamic fusion algorithm that selectively combines outputs from multiple LLMs based on input context. This involves adding a dynamic attention mechanism to the existing Transformer model that will weigh the contributions from each LLM dynamically. Steps for implementation include: 1) Modifying the Transformer class to include additional attention layers that attend to outputs from different LLMs. 2) Developing a scoring function to compute attention weights based on input context. 3) Integrating the weighted outputs to form the final response. 4) Benchmarking the dynamic fusion against static merging algorithms using metrics such as accuracy, loss, and computational efficiency.",
+        "Interestingness": 10,
+        "Feasibility": 6,
+        "Novelty": 9,
+        "novel": true
+    },
+    {
+        "Name": "feature_fusion",
+        "Title": "Feature Fusion: Integrating Intermediate Features from Various LLMs for Enhanced Language Modeling",
+        "Experiment": "We propose a 'Feature Fusion' algorithm that integrates intermediate features from multiple LLM architectures during training. Implementation steps include: 1) Extending the Transformer class to include layers for extracting intermediate features from each LLM. This involves adding hooks in the DecoderBlock to capture intermediate outputs. 2) Concatenating these features before passing them to the final layers. 3) Modifying the forward pass to incorporate fused features before the final output layer. 4) Conducting benchmarks against other merging algorithms on accuracy, loss, and computational efficiency metrics. We will run experiments using LLMs like Llama3 8B, Mistral 7B, Gemma 2 2B, and Phi3 mini, ensuring that the total parameter count remains below 8B.",
+        "Interestingness": 10,
+        "Feasibility": 8,
+        "Novelty": 9,
+        "novel": true
+    }
+]

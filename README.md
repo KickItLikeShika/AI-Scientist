@@ -34,16 +34,6 @@ We further provide all runs and data from our paper [here](https://drive.google.
   <a href="https://github.com/SakanaAI/AI-Scientist/blob/main/example_papers/adaptive_dual_scale_denoising/adaptive_dual_scale_denoising.pdf"><img src="https://github.com/SakanaAI/AI-Scientist/blob/main/docs/anim-ai-scientist.gif" alt="Adaptive Dual Scale Denoising" width="80%" />
 </p>
 
-## Table of Contents
-
-1. [Requirements](#requirements)
-2. [Run AI Scientist Paper Generation Experiments](#run-ai-scientist-paper-generation-experiments)
-3. [Getting an LLM Generated Paper Review](#getting-an-llm-generated-paper-review)
-4. [Making your own Template](#making-your-own-template)
-5. [Template Resources](#template-resources)
-6. [Citing The AI Scientist](#citing-the-ai-scientist)
-7. [Frequently Asked Questions](#faq)
-
 ## Requirements
 
 ### Installation
@@ -186,36 +176,17 @@ The 2D Diffusion template used code from [tiny-diffusion](https://github.com/tan
 
 The Grokking template used code from [Sea-Snell/grokking](https://github.com/Sea-Snell/grokking) and [danielmamay/grokking](https://github.com/danielmamay/grokking).
 
-We would like to thank the developers of the open-source models and packages for their contributions and for making their work available.
-
-## Citing The AI Scientist
+## Citing **The AI Scientist** ✏️
 
 If you use **The AI Scientist** in your research, please cite it as follows:
 
 ```
 @article{lu2024aiscientist,
   title={The AI Scientist: Towards Fully Automated Open-Ended Scientific Discovery},
-  author={Chris Lu and Cong Lu and Robert Tjarko Lange and Jakob Foerster and Jeff Clune and David Ha},
+  author={Lu, Chris and Lu, Cong and Lange, Robert and Foerster, Jakob N and Clune, Jeff and Ha, David},
   journal={arXiv preprint arXiv:2408.06292},
   year={2024}
 }
 ```
 
-## FAQ
-
-We recommend reading our paper in the first instance for any questions you have on The AI Scientist.
-
-### Why am I missing files when running The AI Scientist?
-Make sure you have completed all the setup and preparation steps before the main experiment script.
-
-### Why has a PDF not been generated?
-The AI Scientist finishes an idea with a success rate that depends on both the template, the base foundation model, and the complexity of the idea. We advise referring to our main paper. The highest success rates are observed with Claude Sonnet 3.5.
-
-### What is the cost of each idea generated?
-Typically less than $15 per paper with Claude Sonnet 3.5.
-
-### How do I change the base conference format associated with the write-ups?
-Change the base `template.tex` files contained within each template.
-
-### How do I run The AI Scientist for different subject fields?
-Please refer to the instructions for different templates. In this current iteration, this is restricted to ideas that can be expressed in code. However, lifting this restriction would represent exciting future work! :)
+We would like to thank the developers of the open-source models and packages for their contributions and for making their work available.

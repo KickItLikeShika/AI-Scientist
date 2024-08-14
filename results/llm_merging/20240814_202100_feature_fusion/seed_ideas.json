@@ -1,0 +1,10 @@
+[
+    {
+      "Name": "llm_merging",
+      "Title": "A Powerful Algorithm to Merge Different LLM Architecture",
+      "Experiment": "We introduce a new algorithm to merge different LLMs into a single LLM, that can be very powerful through mering the different capabilities of different LLMs, and we benchmark it against other LLM merging algorithms",
+      "Interestingness": 9,
+      "Feasibility": 8,
+      "Novelty": 8
+    }
+]
